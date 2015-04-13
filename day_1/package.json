@@ -1,0 +1,13 @@
+{
+  "name": "day1_how_to_build_your_own_team_chat",
+  "version": "1.0.0",
+  "description": "How to build your own team chat",
+  "author": "Frederik Dietz",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.1"
+  }
+}

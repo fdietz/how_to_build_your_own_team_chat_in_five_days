@@ -1,0 +1,41 @@
+body {
+  overflow: hidden;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  top: 0;
+  bottom: 0;
+}
+
+.main-content {
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  bottom: 0px;
+  right: 0px;
+
+  @include flexbox;
+  @include flex-direction(column);
+
+  overflow: hidden;
+
+  .main-header {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    height: 60px;
+  }
+
+  .message-list {
+    @include flex(1 1);
+    overflow-y: auto;
+    padding: 20px;
+  }
+
+  .message-form {
+    padding: 20px;
+  }
+}

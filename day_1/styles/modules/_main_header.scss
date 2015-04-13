@@ -1,0 +1,42 @@
+.main-header {
+  @include flexbox;
+  @include align-items(center);
+
+  .left {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-start);
+    @include flex(1 1);
+
+    h2 {
+      position: relative;
+
+      margin: 0;
+
+      color: #474646;
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      .arrow {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 20px;
+        top: 50%;
+        margin-top: -15px;
+      }
+    }
+  }
+
+  .right {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-end);
+    @include flex(1 1);
+
+    .search {
+      width: 200px;
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+$badge-bg: rgb(231, 75, 61);
+
+.badge {
+  display: inline-block;
+  border-radius: 30px;
+  color: #000;
+  vertical-align: middle;
+  min-width: 26px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 3px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #ccc;
+  white-space: nowrap;
+  font-weight: normal;
+
+  &.unread {
+    color: #FFF;
+    background-color: $badge-bg;
+    font-size: 0.7rem;
+    pointer-events: none;
+  }
+
+  &.total {
+    color: #333;
+    background-color: #eee;
+    font-size: 0.7rem;
+  }
+
+}
+

@@ -3,7 +3,7 @@
   padding-left: 0;
 
   > .message-item {
-    @include flexbox;
+    display: flex;
 
     margin-bottom: 20px;
 
@@ -14,15 +14,15 @@
     }
 
     .message-container {
-      @include flex(1 1);
-      @include flexbox;
-      @include flex-direction(column);
+      flex: 1 1;
+      display: flex;
+      flex-direction: column;
 
       margin-left: 10px;
 
       .meta {
-        @include flexbox;
-        @include align-items(baseline);
+        display: flex;
+        align-items: baseline;
 
         line-height: 1.1rem;
 

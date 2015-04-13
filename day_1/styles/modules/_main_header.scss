@@ -1,12 +1,12 @@
 .main-header {
-  @include flexbox;
-  @include align-items(center);
+  display: flex;
+  align-items: center;
 
   .left {
-    @include flexbox;
-    @include align-items(center);
-    @include justify-content(flex-start);
-    @include flex(1 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1;
 
     h2 {
       position: relative;
@@ -29,10 +29,10 @@
   }
 
   .right {
-    @include flexbox;
-    @include align-items(center);
-    @include justify-content(flex-end);
-    @include flex(1 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1 1;
 
     .search {
       width: 200px;

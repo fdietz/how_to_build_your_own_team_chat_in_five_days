@@ -17,8 +17,8 @@ body {
   bottom: 0px;
   right: 0px;
 
-  @include flexbox;
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
 
   overflow: hidden;
 
@@ -30,7 +30,7 @@ body {
   }
 
   .message-list {
-    @include flex(1 1);
+    flex: 1 1;
     overflow-y: auto;
     padding: 20px;
   }

@@ -1,14 +1,14 @@
 $sidebar-bg: rgb(45, 62, 80);
 
 .sidebar {
-  @include flexbox;
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
 
   background-color: $sidebar-bg;
 
   header, footer {
-    @include flexbox;
-    @include align-items(center);
+    display: flex;
+    align-items: center;
 
     position: relative;
 
@@ -64,7 +64,7 @@ $sidebar-bg: rgb(45, 62, 80);
   }
 
   .sidebar-content {
-    @include flex(1 1);
+    flex: 1 1;
   }
 
   footer {
@@ -83,8 +83,8 @@ $sidebar-bg: rgb(45, 62, 80);
     }
 
     .meta {
-      @include flexbox;
-      @include flex-direction(column);
+      display: flex;
+      flex-direction: column;
 
       margin-left: 10px;
 
@@ -115,7 +115,6 @@ $sidebar-bg: rgb(45, 62, 80);
   color: rgb(225, 226, 230);
   text-transform: uppercase;
   font-family: "latolight", "Helvetica", sans-serif;
-  // font-weight: normal;
   font-size: 0.9rem;
 
   margin: 0;

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/application.css">
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('app/bootstrap');
+    </script>
+  </head>
+  <body>
+
+    <div ng-controller="UserController as ctrl">
+
+      <h1 ng-hide="!ctrl.loading">Loading list of Github users</h1>
+
+      <div class="medium progress" ng-show="ctrl.loading">
+        <div>Loading…</div>
+      </div>
+
+      <user-list users="ctrl.users"><user-list>
+    </div>
+
+  </body>
+</html>

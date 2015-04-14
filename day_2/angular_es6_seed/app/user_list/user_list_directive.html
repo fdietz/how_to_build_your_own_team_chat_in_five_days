@@ -1,0 +1,9 @@
+<ul class="user-list">
+  <li ng-repeat="user in ctrl.users" ng-click="ctrl.onClick(user)">
+    <img ng-src="{{user.avatar_url}}" width="36px" height="36px" alt="">
+    <div class="meta">
+      <span class="primary">{{user.login}}</span>
+      <span class="secondary">{{user.repos_url}}</span>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,34 @@
+input.search {
+  border: 1px solid #ECECEC;
+  border-radius: 18px;
+  background-color: #FFF;
+
+  padding: 6px 8px;
+
+  outline: none;
+
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2226%22%20height%3D%2226%22%20viewBox%3D%220%200%2026%2026%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3Ecircle%2C%20ellipse%2C%20line%2C%20path%2C%20polygon%2C%20polyline%2C%20rect%2C%20text%20%7B%20fill%3A%20%23e0e0e0%20!important%3B%20%7D%3C%2Fstyle%3E%3Cpath%20fill%3D%22%239A9999%22%20d%3D%22M21.753%2019.163l-.11-.107-4.338-4.342c.604-1.04.954-2.24.96-3.53.025-3.937-3.146-7.15-7.085-7.177h-.05c-3.916%200-7.105%203.163-7.13%207.09-.026%203.938%203.148%207.15%207.087%207.176h.046c1.31%200%202.538-.354%203.593-.97l4.33%204.335h.004l.11.108c.325.33.858.33%201.187%200l1.395-1.395c.33-.325.33-.86%200-1.187zM11.1%2016.455c-2.93-.02-5.298-2.418-5.28-5.35.02-2.91%202.404-5.278%205.313-5.278h.037c1.42.01%202.747.57%203.745%201.58%201%201.01%201.545%202.347%201.53%203.768-.008%201.413-.566%202.74-1.57%203.736s-2.332%201.545-3.745%201.545h-.03z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+
+  background-position: 3px 46%;
+  padding-left: 32px;
+
+  color: #999;
+
+  &::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.15);
+  }
+
+  &::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.15);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus {
+    color: #666;
+    background-color: #FFF;
+  }
+}

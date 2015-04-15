@@ -1,3 +1,5 @@
+import Auth from "./auth";
+
 export default class WebSocket {
 
   constructor($rootScope) {
@@ -16,7 +18,16 @@ export default class WebSocket {
 
       console.log("WEBSOCKET connected with session id", sessionId);
 
-      this.socket.emit('new_user', { id: sessionId, name: "bla" });
+      this.socket.emit('new_user', { id: sessionId });
+
+      this.socket.on('new_connection', (data) => {
+
+        if (data.id === sessionId) {
+          this.$rootScope.$apply(() => {
+            Auth.setCurrentUser(data);
+          });
+        }
+      });
     });
 
     this.socket.on('error', (error) => {

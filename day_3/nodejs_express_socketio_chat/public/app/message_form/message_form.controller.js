@@ -1,3 +1,5 @@
+import Auth from "../auth";
+
 class MessageFormController {
 
   constructor($http) {
@@ -5,7 +7,7 @@ class MessageFormController {
   }
 
   sendMessage(message) {
-    let params = { message: message, name: "Guest", created_at: new Date().toISOString() };
+    let params = { message: message, name: Auth.getCurrentUser().name, created_at: new Date().toISOString() };
 
     this.$http.post("/message", params ).then(() => {
     }, (reason) => {

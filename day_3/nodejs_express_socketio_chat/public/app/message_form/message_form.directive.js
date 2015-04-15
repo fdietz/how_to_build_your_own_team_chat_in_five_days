@@ -5,6 +5,7 @@ function messageFormDirective() {
   return {
     restrict: "E",
     replace: true,
+    scope: true,
     template: template,
     bindToController: true,
     controllerAs: "ctrl",

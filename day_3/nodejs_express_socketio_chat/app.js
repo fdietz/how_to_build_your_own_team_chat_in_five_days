@@ -47,13 +47,15 @@ app.post("/message", function(request, response) {
 //  { session_id: "YXlbm_LmHD7oUGwkAAAD", name: "Martin"}
 // ]
 var participants = [];
+var nameCounter = 1;
 
 io.on("connection", function(socket) {
   socket.on("new_user", function(data) {
     console.log("ON new_user", data);
 
-    participants.push({ id: data.id, name: data.name });
-    io.sockets.emit("new_connection", { id: data.id, name: data.name, sender:"system", created_at: new Date().toISOString(), participants: participants });
+    var newName = "Guest " + nameCounter++;
+    participants.push({ id: data.id, name: newName });
+    io.sockets.emit("new_connection", { id: data.id, name: newName, sender:"system", created_at: new Date().toISOString(), participants: participants });
   });
 
   socket.on("name_change", function(data) {

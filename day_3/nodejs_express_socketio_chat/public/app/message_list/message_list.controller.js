@@ -9,7 +9,7 @@ class MessageListController {
 
   register() {
     this.WebSocket.on('incoming_message', (data) => {
-      this.handleNewMessage(data);
+      this.handleIncomingMessage(data);
     });
 
     this.WebSocket.on('new_connection', (data) => {
@@ -21,8 +21,8 @@ class MessageListController {
     });
   }
 
-  handleNewMessage(data) {
-    this.messages.push({ message: data.message, name: data.name, created_at: data.created_at, type: "message" });
+  handleIncomingMessage(data) {
+    this.messages.push({ message: data.message, user: data.user, created_at: data.created_at, type: "message" });
   }
 
   handleUserDisconnected(data) {

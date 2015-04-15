@@ -30,11 +30,12 @@ app.post("/message", function(request, response) {
   var message = request.body.message;
 
   if(message && message.trim().length > 0) {
-    // sender's name
-    var name = request.body.name;
+    // sender
+    var user       = request.body.user;
+    var created_at = request.body.created_at;
 
     // let our chatroom know there was a new message
-    io.sockets.emit("incoming_message", { message: message, name: name });
+    io.sockets.emit("incoming_message", { message: message, user: user, created_at: created_at });
 
     response.json(200, { message: "Message received" });
   } else {

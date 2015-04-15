@@ -7,7 +7,13 @@ class MessageFormController {
   }
 
   sendMessage(message) {
-    let params = { message: message, name: Auth.getCurrentUser().name, created_at: new Date().toISOString() };
+    let params = {
+      message: message,
+      created_at: new Date().toISOString(),
+      user: {
+        name: Auth.getCurrentUser().name
+      }
+    };
 
     this.$http.post("/message", params ).then(() => {
     }, (reason) => {

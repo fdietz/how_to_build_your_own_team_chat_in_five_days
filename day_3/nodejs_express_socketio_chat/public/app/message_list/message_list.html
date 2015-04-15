@@ -3,7 +3,7 @@
     <img src="images/profile.jpg" class="avatar" ng-if="messageContent.type == 'message'">
     <div class="message-container">
       <div class="meta">
-        <span class="author">{{messageContent.name}}</span> <span class="date">{{messageContent.created_at}}</span>
+        <span class="author">{{messageContent.user.name}}</span> <span class="date">{{messageContent.created_at}}</span>
       </div>
       <div class="message">
         {{messageContent.message}}

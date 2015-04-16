@@ -21,10 +21,9 @@ export default class WebSocket {
       this.socket.emit('new_user', { id: sessionId });
 
       this.socket.on('new_connection', (data) => {
-
-        if (data.id === sessionId) {
+        if (data.user.id === sessionId) {
           this.$rootScope.$apply(() => {
-            Auth.setCurrentUser(data);
+            Auth.setCurrentUser(data.user);
           });
         }
       });

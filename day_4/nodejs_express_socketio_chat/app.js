@@ -59,8 +59,10 @@ io.on("connection", function(socket) {
     participants.push({ id: data.id, name: newName });
 
     io.sockets.emit("new_connection", {
-      id: data.id,
-      name: newName,
+      user: {
+        id: data.id,
+        name: newName
+      },
       sender:"system",
       created_at: new Date().toISOString(),
       participants: participants
@@ -80,8 +82,10 @@ io.on("connection", function(socket) {
     var participant = _.findWhere(participants, { id: socket.id });
     participants    = _.without(participants, participant);
     io.sockets.emit("user_disconnected", {
-      id: socket.id,
-      name: participant.name,
+      user: {
+        id: socket.id,
+        name: participant.name
+      },
       sender:"system",
       created_at: new Date().toISOString()
     });

@@ -27,11 +27,11 @@ class MessageListController {
   }
 
   handleUserDisconnected(data) {
-    this.messages.push({ message: `User ${data.name} disconnected`, name: "System", created_at: data.created_at, type: "notification" });
+    this.messages.push({ message: `User ${data.user.name} disconnected`, name: "System", created_at: data.created_at, type: "notification" });
   }
 
   handleNewConnection(data) {
-    this.messages.push({ message: `User ${data.name} joined`, name: "System", created_at: data.created_at, type: "notification" });
+    this.messages.push({ message: `User ${data.user.name} joined`, name: "System", created_at: data.created_at, type: "notification" });
   }
 
 }

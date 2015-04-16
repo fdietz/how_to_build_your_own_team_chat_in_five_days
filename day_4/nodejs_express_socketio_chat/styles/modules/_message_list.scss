@@ -1,0 +1,59 @@
+.message-list {
+  margin: 0;
+  padding-left: 0;
+
+  > .message-item {
+    display: flex;
+
+    margin-bottom: 20px;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    .message-container {
+      flex: 1 1;
+      display: flex;
+      flex-direction: column;
+
+      margin-left: 10px;
+
+      .meta {
+        display: flex;
+        align-items: baseline;
+
+        line-height: 1.1rem;
+
+        .author {
+          font-size: 1rem;
+          font-weight: bold;
+          text-transform: lowercase;
+          color: #474646;
+        }
+
+        .date {
+          margin-left: 8px;
+
+          color: #C2C1C1;
+          font-size: 0.9rem;
+          font-weight: 300;
+        }
+      }
+
+      .message {
+        color: rgb(79, 79, 79);
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    &.notification {
+      .message-container {
+        margin-left: 50px;
+      }
+    }
+
+  }
+}

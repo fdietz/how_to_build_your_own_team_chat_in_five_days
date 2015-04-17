@@ -5,8 +5,7 @@
       <div class="meta">
         <span class="author" ng-if="messageContent.user">{{messageContent.user.name}}</span><span class="date">{{messageContent.created_at | relativeDate }}</span>
       </div>
-      <div class="message">
-        {{messageContent.message}}
+      <div class="message" formatted-message="messageContent.message">
       </div>
     </div>
   </div>

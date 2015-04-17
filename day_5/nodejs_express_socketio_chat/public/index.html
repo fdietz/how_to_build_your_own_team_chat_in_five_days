@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/application.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('app/bootstrap');
+    </script>
+  </head>
+  <body>
+
+    <sidebar></sidebar>
+
+    <div class="main-content">
+
+      <div class="main-header">
+        <div class="left">
+          <h2># general</h2>
+        </div>
+        <div class="right">
+          <input class="search" type="search" placeholder="Search...">
+        </div>
+      </div>
+
+      <message-list></message-list>
+      <message-form></message-form>
+    </div>
+
+  </body>
+</html>

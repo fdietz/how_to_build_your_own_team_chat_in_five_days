@@ -8,9 +8,20 @@
     margin-bottom: 20px;
 
     .avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       width: 40px;
       height: 40px;
       border-radius: 4px;
+
+      .initials {
+        font-size: 1.8em;
+        font-weight: bold;
+
+        color: white;
+      }
     }
 
     .message-container {

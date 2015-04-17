@@ -7,13 +7,13 @@ function formattedMessage() {
       "formattedMessage" : "="
     },
     link: function($scope, element, attrs) {
-      $scope.$watch("formattedMessage", function(str) {
+      var unwatch = $scope.$watch("formattedMessage", function(str) {
         if (str) {
           str = FormatMessageService.breakNewLine(str);
-          console.log('str', str)
           str = FormatMessageService.autoLink(str);
-          console.log('str autolink', str)
           element.html(str);
+
+          unwatch();
         }
       });
     }

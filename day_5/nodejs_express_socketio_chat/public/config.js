@@ -20,6 +20,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.1.9",
     "core-js": "npm:core-js@0.8.3",
     "jquery": "github:components/jquery@2.1.3",
+    "moment": "github:moment/moment@2.10.2",
     "text": "github:systemjs/plugin-text@0.0.2",
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
@@ -27,6 +28,6 @@ System.config({
     "npm:core-js@0.8.3": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
-  },
+  }
 });
 

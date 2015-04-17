@@ -30,6 +30,7 @@
       "express": "jspm:express@3.4.4",
       "jade": "jspm:jade",
       "jquery": "github:components/jquery@^2.1.3",
+      "moment": "github:moment/moment@^2.10.2",
       "socket.io": "jspm:socket.io@^1.3.5",
       "text": "github:systemjs/plugin-text@^0.0.2",
       "underscore": "jspm:underscore@^1.8.3"

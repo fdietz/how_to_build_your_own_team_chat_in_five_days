@@ -27,6 +27,6 @@ System.config({
     "npm:core-js@0.8.3": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     }
-  },
+  }
 });
 
